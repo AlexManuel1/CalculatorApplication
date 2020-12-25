@@ -1,6 +1,6 @@
 html {
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 body {
@@ -36,3 +36,78 @@ nav ul li{
     display: inline;
     margin: 0em 2.5em 0em 0em;
 }
+
+#calculator-frame {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator-top {
+    background-color: rgb(20, 20, 20);
+    height: 5em;
+    align-self: flex-end;
+    border-radius: 15px 15px 15px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em 1em 1em 1em;
+    box-shadow: 7px 7px 27px 5px rgba(0,0,0,0.5);
+}
+
+#calculator-display {
+    background-color: rgb(50, 50, 50);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#calculator-body {
+    box-sizing: border-box;
+    background-color: rgb(10, 10, 10);
+    border-radius: 15px 15px 15px 15px;
+    border: 5px solid rgb(20,20,20);
+    box-shadow: 7px 7px 27px 5px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    height: 20em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 20% 80%;
+    grid-gap: 0em 0.5em;
+}
+
+.all-button-grids {
+    padding: 0.5em;
+    width: 100%;
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: 1fr 1fr;
+}
+
+#rect-container {
+    background-color: rgb(114, 224, 120);
+    width: 90%;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#clear {
+    grid-gap: 0.3em;
+    padding: 0.3em;
+}
+
+#digits {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.all-buttons {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30,30,30);
+    color: white;
+    font-size: 1.2rem;
+}
+
