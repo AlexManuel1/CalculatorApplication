@@ -34,3 +34,15 @@ function backspace() {
     inputString = inputString.slice(0, inputString.length-1);
     document.getElementById("calculator-display").innerHTML = inputString;
 }
+
+window.addEventListener("keydown", event => {
+    if (/[\d.+\-*\/%]/.test(String(event.key))) {
+        inputEvent(event.key);
+    } else if (event.key === "Enter") {
+        equals();
+    } else if (event.key === "Backspace") {
+        backspace();
+    } else if (event.key === "Clear") {
+        clearDisplay();
+    }
+})

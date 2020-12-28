@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="calculator.css">
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
 </head>
 <body>
     <header>
-        <h1>Scienfic Calculator</h1>
+        <h1>Scientific Calculator</h1>
         <nav>
             <ul>
                 <li>Calculator</li>
@@ -15,41 +16,56 @@
             </ul>
         </nav>
     </header>
-    <div id="calculator-frame">
-        <div id="calculator-top">
-            <div id="calculator-display"></div>
+    <div id="webpage-layout">
+        <div id="calculator-section" class="section">
+            <div id="calculator-frame">
+                <div id="calculator-top">
+                    <div id="calculator-display"></div>
+                </div>
+                <div id="calculator-body">
+                    <div id="rect-container" class="all-button-grids">
+                        <div id="rect"></div>
+                    </div>
+                    <div id="clear" class="all-button-grids">
+                        <div><button class="all-buttons" onclick="clearDisplay()">Clear</button></div>
+                        <div><button class="all-buttons" onclick="backspace()">Back</button></div>
+                    </div>
+                    <div id="digits" class="all-button-grids">
+                        <div><button class="all-buttons" onclick="inputEvent(1)">1</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(2)">2</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(3)">3</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(4)">4</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(5)">5</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(6)">6</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(7)">7</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(8)">8</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(9)">9</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent(0)">0</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent('.')">.</button></div>
+                        <div><button class="all-buttons" onclick="equals()">=</button></div>
+                    </div>
+                    <div class="all-button-grids">
+                        <div><button class="all-buttons" onclick="inputEvent('+')">+</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent('-')">-</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent('*')">×</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent('/')">÷</button></div>
+                        <div><button class="all-buttons" onclick="inputEvent('%')">Mod</button></div>
+                        <div><button class="all-buttons" onclick="answer()">Ans</button></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="calculator-body">
-            <div id="rect-container" class="all-button-grids">
-                <div id="rect"></div>
+        <div id="about-section" class="section">
+            <div id="info">
+                <h2>Make Basic Calculations!</h2>
+                <p>Thank you for using TheScientificCalculator!</p>
             </div>
-            <div id="clear" class="all-button-grids">
-                <div><button class="all-buttons">Clear</button></div>
-                <div><button class="all-buttons">Back</button></div>
-            </div>
-            <div id="digits" class="all-button-grids">
-                <div><button class="all-buttons">1</button></div>
-                <div><button class="all-buttons">2</button></div>
-                <div><button class="all-buttons">3</button></div>
-                <div><button class="all-buttons">4</button></div>
-                <div><button class="all-buttons">5</button></div>
-                <div><button class="all-buttons">6</button></div>
-                <div><button class="all-buttons">7</button></div>
-                <div><button class="all-buttons">8</button></div>
-                <div><button class="all-buttons">9</button></div>
-                <div><button class="all-buttons">0</button></div>
-                <div><button class="all-buttons">.</button></div>
-                <div><button class="all-buttons">=</button></div>
-            </div>
-            <div class="all-button-grids">
-                <div><button class="all-buttons">+</button></div>
-                <div><button class="all-buttons">-</button></div>
-                <div><button class="all-buttons">×</button></div>
-                <div><button class="all-buttons">÷</button></div>
-                <div><button class="all-buttons">Mod</button></div>
-                <div><button class="all-buttons">Floor</button></div>
-            </div>
-        </div>
+        </div> 
     </div>
+    <footer>
+        <p>Github: AlexManuel1</p>
+    </footer>
+    
+    <script src="calculator.js"></script>
 </body>
 </html>
