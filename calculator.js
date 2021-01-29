@@ -44,5 +44,7 @@ window.addEventListener("keydown", event => {
         backspace();
     } else if (event.key === "Clear") {
         clearDisplay();
+    } else if (event.key === "Escape") {
+        clearDisplay();
     }
 })
